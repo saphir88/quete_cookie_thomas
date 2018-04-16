@@ -1,8 +1,4 @@
 <?php require 'inc/head.php';
-session_start();
-if (!isset($_SESSION["loginname"])) {
-    header('location:login.php');
-}
 ?>
 <section class="cookies container-fluid">
   <div class="row">

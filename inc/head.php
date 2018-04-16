@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +53,10 @@
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid text-right">
-    <strong>Hello Wilder !</strong>
+    <strong>
+        <?php if (isset($_SESSION['loginname'])) {
+            echo "Hello ".$_SESSION['loginname']. " !";
+        }
+        ?></strong>
   </div>
 </header>
